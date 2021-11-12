@@ -10,6 +10,7 @@ import Table from "./Table";
 import Switch from "react-switch";
 import { ExportToExcel } from "./ExportToExcel";
 import { Card } from "reactstrap";
+import BarChart from "./BarChart";
 class Map extends Component {
   constructor(props) {
     super(props);
@@ -18,6 +19,7 @@ class Map extends Component {
       showProgress: true,
       filter: "Gender Equality",
       data: [],
+      chartData: null,
       columns: [
         {
           Header: "District",
@@ -92,7 +94,33 @@ class Map extends Component {
     this.setState({
       data: features,
     });
+    this.handleChartData(features);
   }
+
+  handleChartData = (data) => {
+    let label = ["Area"];
+    let dataset = [];
+    data.forEach((val) => {
+      let dd = [val.properties.distarea];
+      dataset.push({
+        label: val.properties.distname,
+        backgroundColor: "rgba(255,99,132,0.2)",
+        borderColor: "rgba(255,99,132,1)",
+        borderWidth: 1,
+        hoverBackgroundColor: "rgba(255,99,132,0.4)",
+        hoverBorderColor: "rgba(255,99,132,1)",
+        data: dd,
+      });
+    });
+
+    const dataDb = {
+      labels: label,
+      datasets: dataset,
+    };
+
+    this.setState({ chartData: dataDb });
+  };
+
   onEachDistrict = (district, layer) => {
     const name = district.properties.distname;
     layer.options.weight = 1;
@@ -278,6 +306,11 @@ class Map extends Component {
           </Colxx>
         </div>
         <hr className="mt-0 bg-light" />
+        {this.state.chartData ? (
+          <BarChart data={this.state.chartData} />
+        ) : (
+          <></>
+        )}
         <div className="d-flex">
           <div className="d-flex ml-2 mt-2">
             <h4>{this.state.filter}: Indicator List</h4>

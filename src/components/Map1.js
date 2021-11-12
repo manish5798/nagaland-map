@@ -187,6 +187,40 @@ class Map extends Component {
               </div>
               <GeoJSON data={features} onEachFeature={this.onEachDistrict} />
             </MapContainer>
+            <Row className="mt-2">
+              <Row className="w-100 justify-content-center">
+                <Colxx className="d-flex ml-2 justify-content-center align-items-center">
+                  <div
+                    className="bg-info"
+                    style={{ width: "20px", height: "15px" }}
+                  ></div>
+                  <p className="pt-3 pl-1">Category1</p>
+                </Colxx>
+                <Colxx className="d-flex ml-2 justify-content-center align-items-center">
+                  <div
+                    className="bg-warning"
+                    style={{ width: "20px", height: "15px" }}
+                  ></div>
+                  <p className="pt-3 pl-1">Category2</p>
+                </Colxx>
+              </Row>
+              <Row className="w-100 justify-content-center">
+                <Colxx className="d-flex ml-2 justify-content-center align-items-center">
+                  <div
+                    className="bg-danger"
+                    style={{ width: "20px", height: "15px" }}
+                  ></div>
+                  <p className="pt-3 pl-1">Category3</p>
+                </Colxx>
+                <Colxx className="d-flex ml-2 justify-content-center align-items-center">
+                  <div
+                    className="bg-success"
+                    style={{ width: "20px", height: "15px" }}
+                  ></div>
+                  <p className="pt-3 pl-1">Category4</p>
+                </Colxx>
+              </Row>
+            </Row>
           </Colxx>
           <Colxx sm="6" className="py-0">
             <div className="d-flex">

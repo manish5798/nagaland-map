@@ -1,15 +1,8 @@
 import React, { Component } from "react";
 import { MapContainer, GeoJSON } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import { features } from "../Data/data1.json";
-import { dataColors } from "../dataColor";
-import { ProgressBar, Row } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import { Colxx } from "../Common/CustomBootstrap";
-import Table from "../Common/Table";
-import Switch from "react-switch";
-import { ExportToExcel } from "../ExportToExcel";
-import { Card } from "reactstrap";
-import BarChart from "../Common/BarChart";
 import "./Map.css";
 class Map extends Component {
   constructor(props) {

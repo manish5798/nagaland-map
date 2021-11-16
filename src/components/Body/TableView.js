@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Row, ProgressBar } from "react-bootstrap";
 import { Card } from "reactstrap";
-import ChartCard from "../Common/ChartCard";
-import Select from "react-select";
+// import ChartCard from "../Common/ChartCard";
+// import Select from "react-select";
 import Table from "../Common/Table";
 import { Colxx } from "../Common/CustomBootstrap";
 import { ExportToExcel } from "../ExportToExcel";

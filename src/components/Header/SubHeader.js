@@ -3,8 +3,6 @@ import "./Header.css";
 import { Row } from "react-bootstrap";
 import { Colxx } from "../Common/CustomBootstrap";
 import Select from "react-select";
-import DashView from "../../assets/dashview.png";
-import TableView from "../../assets/table.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTable, faChartLine } from "@fortawesome/free-solid-svg-icons";
 
@@ -113,6 +111,7 @@ export default class SubHeader extends React.Component {
                 cursor: "pointer",
                 opacity: 0.7,
               }}
+              // eslint-disable-next-line
               className={this.props.viewFilter === "Table" ? "view" : ""}
               onClick={() => {
                 this.props.setView("Table");

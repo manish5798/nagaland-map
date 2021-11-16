@@ -13,7 +13,7 @@ import {
 } from "reactstrap";
 
 import VerticlBar from "../../assets/chart/bar.svg";
-import HorizontalBar from "../../assets/chart/horizontalbar.svg";
+// import HorizontalBar from "../../assets/chart/horizontalbar.svg";
 import Pie from "../../assets/chart/pie.svg";
 import Scatter from "../../assets/chart/line.svg";
 import Area from "../../assets/chart/area.svg";

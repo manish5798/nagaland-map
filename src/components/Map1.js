@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { MapContainer, GeoJSON } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import { features } from "./data1.json";
+import { features } from "../components/Data/data1.json";
 import { dataColors } from "./dataColor";
 import Header from "./Navbar";
 import { ProgressBar, Row } from "react-bootstrap";
-import { Colxx } from "./CustomBootstrap";
-import Table from "./Table";
+import { Colxx } from "./Common/CustomBootstrap";
+import Table from "./Common/Table";
 import Switch from "react-switch";
 import { ExportToExcel } from "./ExportToExcel";
 import { Card } from "reactstrap";
